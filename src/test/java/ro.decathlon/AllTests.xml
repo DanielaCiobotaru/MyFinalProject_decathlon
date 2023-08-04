@@ -1,0 +1,19 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+
+<suite name="AllTests" verbose="1" >
+    <test name="decathlon" >
+        <classes>
+            <class name="ro.decathlon" />
+        </classes>
+    </test>
+
+    <test name="Login and Logout">
+        <classes>
+            <class name="ro.decathlon.CautaProdus"/>
+            <class name="ro.decathlon.SelectieCortReducere"/>
+            <class name="ro.decathlon.CautaProdusNegativ"/>
+            <class name="ro.decathlon.AlegeCort"/>
+
+        </classes>
+    </test>
+</suite>
