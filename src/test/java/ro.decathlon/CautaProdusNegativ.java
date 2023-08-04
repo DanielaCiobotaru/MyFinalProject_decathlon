@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class CautaProdus {
+public class CautaProdusNegativ {
     @Test
     public void deschidePagina() {
         System.setProperty("webdriver.chrome.driver", "src/main/resources/chromedriver.exe");
@@ -21,10 +21,10 @@ public class CautaProdus {
         new WebDriverWait(driver, Duration.ofSeconds(5));
         driver.findElement(By.id("didomi-notice-agree-button")).click();
         WebElement cautaProdus = driver.findElement(By.xpath("//*[@id=\"search-bar\"]/div/form/input"));
-        cautaProdus.sendKeys("cort");
-      cautaProdus.submit();
-        String mesajCort = "Sugestiile noastre";
-        WebElement mesajCorect = driver.findElement(By.xpath("//*[@id=\"search-suggestions-banner\"]/div/div[2]/div[1]"));
-Assert.assertTrue(mesajCort.contains("Sugestiile noastre"));
+        cautaProdus.sendKeys("ruj");
+        cautaProdus.submit();
+        String mesajRuj = "Ne pare rău";
+        WebElement mesajCorect = driver.findElement(By.xpath("//*[@id=\"search-suggestions-banner\"]/div/div/div[1]"));
+        Assert.assertTrue(mesajRuj.contains("Ne pare rău"));
     }
 }
