@@ -20,9 +20,11 @@ public class Login {
        new WebDriverWait(driver, Duration.ofSeconds(10));
        driver.findElement(By.id("didomi-notice-agree-button")).click();
        driver.findElement(By.xpath("//*[@id=\"app\"]/header/div[1]/nav/div[2]/div[4]/a")).click();
-WebElement emailInput = driver.findElement(By.id("input-email"));
+       new WebDriverWait(driver, Duration.ofSeconds(5));
+       WebElement emailInput = driver.findElement(By.id("input-email"));
 emailInput.sendKeys("bleunuage2000@gmail.com");
 driver.findElement(By.id("lookup-btn-container")).click();
+       new WebDriverWait(driver, Duration.ofSeconds(5));
 WebElement passwordInput = driver.findElement(By.id("input-password"));
 passwordInput.sendKeys("Bleunuage1982!");
 

@@ -24,6 +24,7 @@ public class SelectieCortReducere {
         filtrareReducere.click();
         WebElement optiuneaReducere = driver.findElement(By.id("option-list-sort-select-3"));
         optiuneaReducere.click();
+        new WebDriverWait(driver, Duration.ofSeconds(5));
         Assert.assertTrue(optiuneaReducere.isEnabled());
     }
 }
